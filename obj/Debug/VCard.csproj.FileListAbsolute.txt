@@ -1,0 +1,6 @@
+C:\Users\Server\Desktop\VCard\bin\Debug\VCard.dll
+C:\Users\Server\Desktop\VCard\bin\Debug\VCard.pdb
+C:\Users\Server\Desktop\VCard\obj\Debug\VCard.csproj.AssemblyReference.cache
+C:\Users\Server\Desktop\VCard\obj\Debug\VCard.csproj.CoreCompileInputs.cache
+C:\Users\Server\Desktop\VCard\obj\Debug\VCard.dll
+C:\Users\Server\Desktop\VCard\obj\Debug\VCard.pdb
