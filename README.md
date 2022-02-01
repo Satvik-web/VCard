@@ -6,6 +6,10 @@ This is a type of file ending with ".vcf"
 
 You can easily create such files using this package..
 
+I have given an implementation here..
+But I would Strongly recommend visiting my blog for the detail explanation..
+Link : https://satvikr.blogspot.com
+
 Installing this package:
 Add this nuget package to your project..
 Nuget page: https://www.nuget.org/packages/VCard/
