@@ -1,23 +1,21 @@
 # VCard
 
-This Package enables you to create contact cards..
+This Package enables you to create virtual contact cards(VCF).
 
-This is a type of file ending with ".vcf"
-
-You can easily create such files using this package..
-
-I have given an implementation here..
-But I would Strongly recommend visiting my blog for the detail explanation..
-Link : https://satvikr.blogspot.com
+You can easily create VCards with single or multiple Phone numbers and Emails in a single contact without much hazzle..
 
 Installing this package:
 Add this nuget package to your project..
-Nuget page: https://www.nuget.org/packages/VCard/
+```
+dotnet add package VCard --version 2.0.0
+```
 
 Create a new Contact:
-Add the following namespaces to your project..
-VCard.Models
-VCard.Helpers
+Add the following namespaces to your project.
+```C#
+using VCard.Models;
+using VCard.Helpers;
+```
 
 Code to create a new contact:
 ```C#
@@ -33,7 +31,10 @@ Contact contact = new Contact
     {
         new Phone{Number="0000000000", Type="Home"}
     },
-    Email = "someone@examplemail.com",
+    Email = new System.Collections.Generic.List<Email>()
+    {
+        { new Email(){ Mail="youremail", Type="Home"} }
+    },
     FormattedName = "Satvik",
     Organization = "Nuget",
     Title = "Satvik"
@@ -41,22 +42,12 @@ Contact contact = new Contact
 ```
 To get the vcard use the following command:
 ```C#
-FileHelper.CreateVCard(contact);
+CardHelper.CreateVCard(contact);
 ```
 
-The following command will return a string..
-So we can get it using the following command:
-
-```C#
-string contents = FileHelper.CreateVCard(contact);
-```
-
-Now we can use the string to create the physical file..
+This returns the VCard as a string which could be used to save it in your system..
 ```C#
 string contents = FileHelper.CreateVCard(contact);
 File.WriteAllText("FileName.vcf", contents);
 ```
 Please make sure that you use the file extention as vcf..
-
-# Support
-All I have ever asked is to be active by submitting bugs, features and downloading this package..
